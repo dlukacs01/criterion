@@ -2,6 +2,13 @@
 
 class Db_object {
 
+    public static function find_all() {
+
+        // LATE STATIC BINDING
+        return static::find_by_query("SELECT * FROM " . static::$db_table . " ");
+
+    }
+
 	public static function find_by_id($id) {
 
 		global $database;
