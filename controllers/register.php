@@ -43,9 +43,8 @@ if(isset($_POST['submit'])) {
             $user->password = $hashed_password;
 
             $user->save(); // save to db
-            $session->message("The user {$user->email} has been added");
             $session->login($user);
-            redirect("../views/admin/register.php");
+            redirect("../views/admin/index.php");
 
         }
 

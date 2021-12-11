@@ -5,14 +5,11 @@ class Session {
 
 	private $signed_in = false;
 	public $user_id;
-	// public $message;
-
 
 	function __construct() {
 
 		session_start();
 		$this->check_the_login();
-		// $this->check_message();
 
 	}
 
@@ -59,10 +56,8 @@ class Session {
 
 		if(isset($_SESSION['user_id'])) {
 
-
 			$this->user_id	= $_SESSION['user_id'];
 			$this->signed_in = true;
-
 
 		} else {
 
@@ -76,6 +71,5 @@ class Session {
 }
 
 $session = new Session();
-// $message = $session->message();
 
 ?>

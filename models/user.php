@@ -23,7 +23,7 @@ class User extends Db_object {
 
 		$the_result_array = self::find_by_query($sql);
 
-		// returns the logged in user as an object, or false...
+		// returns the founded user as an object, or false...
 		return !empty($the_result_array) ? array_shift($the_result_array) : false;
 	}
 

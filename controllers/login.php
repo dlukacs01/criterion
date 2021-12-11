@@ -14,18 +14,15 @@ if(isset($_POST['submit'])) {
             $session->login($user_found);
             redirect("../views/admin/index.php");
         } else {
+            $session->set_flash_message("credentials_password", "Hibás jelszó!");
             redirect("../index.php");
         }
 
 	} else {
-		$the_message = "Hibás email cím vagy jelszó!";
+        $session->set_flash_message("credentials_email", "Hibás email!");
+        redirect("../index.php");
 	}
 
-} else {
-	// so we wont get the undeclared variables error on the screen (setting default values)
-	$the_message = ""; 
-	$email = "";
-	$password = "";
 }
 
 ?>
