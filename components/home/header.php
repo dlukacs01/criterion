@@ -8,6 +8,6 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>CRITERION</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
